@@ -8,6 +8,7 @@
     >
       {{ item.title }}
     </van-tabbar-item>
+    
   </van-tabbar>
 </template>
 
@@ -16,23 +17,30 @@ import { ref, reactive } from "vue";
 
 const active = ref(0);
 const tabbarData = reactive([
+  // {
+  //   icon: "wap-home-o",
+  //   title: "主页",
+  //   to: {
+  //     name: "Demo"
+  //   }
+  // },
   {
-    icon: "wap-home-o",
-    title: "主页",
+    icon: "edit",
+    title: "编辑",
     to: {
-      name: "Demo"
+      name: "Edit"
     }
   },
   {
     icon: "gem-o",
-    title: "工具",
+    title: "图册",
     to: {
       name: "Tools"
     }
   },
   {
     icon: "user-o",
-    title: "关于",
+    title: "我的",
     to: {
       name: "About"
     }

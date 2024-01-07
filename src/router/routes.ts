@@ -7,14 +7,22 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "root",
     component: Layout,
-    redirect: { name: "Demo" },
+    redirect: { name: "Edit" },
     children: [
+      // {
+      //   path: "demo",
+      //   name: "Demo",
+      //   component: Demo,
+      //   meta: {
+      //     title: "主页"
+      //   }
+      // },
       {
-        path: "demo",
-        name: "Demo",
-        component: Demo,
+        path: "edit",
+        name: "Edit",
+        component: () => import("@/views/edit/index.vue"),
         meta: {
-          title: "主页"
+          title: "编辑"
         }
       },
       {
